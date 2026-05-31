@@ -135,15 +135,22 @@
             text-decoration: underline;
         }
 
-        .back-link {
-            display: inline-block;
+        .page-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
             margin-top: 16px;
+        }
+
+        .page-link {
+            display: inline-block;
             font-size: 14px;
             color: #7c6dab;
             text-decoration: none;
         }
 
-        .back-link:hover {
+        .page-link:hover {
             text-decoration: underline;
         }
 
@@ -187,7 +194,10 @@
 
         <div class="contact-box">
             <p>Have questions? Contact us at<br><a href="mailto:kfk.apps.hushaby@gmail.com">kfk.apps.hushaby@gmail.com</a></p>
-            <a class="back-link" href="./index.html">← Back to Privacy Policy</a>
+            <div class="page-links">
+                <a class="page-link" href="./index.html">← Back to Privacy Policy</a>
+                <a class="page-link" href="./terms-of-use.html">Terms of Use →</a>
+            </div>
         </div>
     </div>
 
