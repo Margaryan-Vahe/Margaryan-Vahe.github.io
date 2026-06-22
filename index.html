@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy — Hushaby: Baby Sleep Sounds</title>
+    <title>Privacy Policy — Kit For Kids Apps</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
 
@@ -20,10 +20,42 @@
         }
 
         .container {
-            max-width: 640px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 60px 24px 40px;
+            padding: 56px 24px 40px;
             flex: 1;
+            width: 100%;
+        }
+
+        .app-switcher {
+            display: flex;
+            gap: 8px;
+            padding: 6px;
+            background: #fff;
+            border: 1px solid #e8e4df;
+            border-radius: 999px;
+            margin: 0 auto 28px;
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .app-tab {
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: #6b6560;
+            cursor: pointer;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 16px;
+            transition: background 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .app-tab.active {
+            background: #7c6dab;
+            color: #fff;
         }
 
         .app-badge {
@@ -133,15 +165,22 @@
             text-decoration: underline;
         }
 
-        .other-link {
-            display: inline-block;
+        .page-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
             margin-top: 16px;
+        }
+
+        .page-link {
+            display: inline-block;
             font-size: 14px;
             color: #7c6dab;
             text-decoration: none;
         }
 
-        .other-link:hover {
+        .page-link:hover {
             text-decoration: underline;
         }
 
@@ -152,100 +191,358 @@
             color: #b0aaa3;
             border-top: 1px solid #e8e4df;
         }
+
+        @media (max-width: 520px) {
+            .container {
+                padding-top: 32px;
+            }
+
+            .app-switcher {
+                width: 100%;
+            }
+
+            .app-tab {
+                flex: 1;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            h1 {
+                font-size: 29px;
+            }
+
+            .section {
+                padding: 22px;
+            }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
+        <div class="app-switcher" aria-label="Choose application">
+            <button class="app-tab active" type="button" data-app="hushaby">Hushaby</button>
+            <button class="app-tab" type="button" data-app="onceupon">OnceUpon</button>
+        </div>
+
         <div class="app-badge">
-            <div class="icon">🌙</div>
-            Hushaby: Baby Sleep Sounds
+            <div class="icon" id="appIcon">🌙</div>
+            <span id="appName">Hushaby: Baby Sleep Sounds</span>
         </div>
 
         <h1>Privacy Policy</h1>
-        <p class="dates">Effective date: May 6, 2026 · Last updated: May 9, 2026</p>
-        <p class="intro">Hushaby is designed to help families play lullabies and soothing sleep sounds for babies. We aim to collect as little data as possible and keep your experience simple and private.</p>
+        <p class="dates" id="dates"></p>
+        <p class="intro" id="intro"></p>
 
-        <div class="section">
-            <h2>1. Information we collect</h2>
-            <p>Hushaby does not require account registration and does not operate its own backend for storing personal data.</p>
-            <p>The app may process the following information locally on your device:</p>
-            <ul>
-                <li>your selected app language;</li>
-                <li>your profile photo, if you choose one;</li>
-                <li>favorites, onboarding progress, launch count, rating state, and subscription status needed for app functionality.</li>
-            </ul>
-            <p>Your profile photo is chosen by you through the system photo picker. The selected image is copied into the app storage on your device and is not uploaded by Hushaby to our servers.</p>
-        </div>
-
-        <div class="section">
-            <h2>2. Photos and media access</h2>
-            <p>Hushaby uses the system photo picker when you choose a profile picture. This means you select a specific image to share with the app. Hushaby does not request broad access to your photo library.</p>
-        </div>
-
-        <div class="section">
-            <h2>3. How we use information</h2>
-            <p>We use local app data only to provide app features, including:</p>
-            <ul>
-                <li>showing your chosen profile photo;</li>
-                <li>remembering your language and app preferences;</li>
-                <li>restoring your app state on the same device;</li>
-                <li>supporting purchases and subscription access.</li>
-            </ul>
-        </div>
-
-        <div class="section">
-            <h2>4. Sharing of information</h2>
-            <p>Hushaby does not sell your personal data.</p>
-            <p>We do not upload your profile photo or local profile data to our own servers. Some limited data may be processed by third-party service providers that support app purchases and billing functionality, such as RevenueCat and the app store provider (for example, Google Play or Apple), in accordance with their own privacy terms.</p>
-        </div>
-
-        <div class="section">
-            <h2>5. Data storage and retention</h2>
-            <p>Data created by Hushaby is primarily stored locally on your device. Your profile photo remains on your device until you delete it in the app or remove the app from your device.</p>
-        </div>
-
-        <div class="section">
-            <h2>6. Children's privacy</h2>
-            <p>Hushaby is intended for parents and caregivers to use for baby sleep audio. The app is not designed to be operated by children.</p>
-            <p>Hushaby complies with the Children's Online Privacy Protection Act (COPPA). We do not knowingly collect personal information from children under 13. The app does not require registration, does not collect names, email addresses, or other identifiers from children, and does not include behavioral advertising or third-party tracking directed at children.</p>
-            <p>If you are a parent or guardian and believe that your child has provided personal information through the app, please contact us at the email address listed below, and we will promptly take steps to delete such information.</p>
-        </div>
-
-        <div class="section">
-            <h2>7. Rights of users in the European Economic Area (EEA)</h2>
-            <p>If you are located in the European Economic Area, you have rights under the General Data Protection Regulation (GDPR), including the right to access, correct, or delete your personal data, and the right to restrict or object to its processing.</p>
-            <p>Since Hushaby stores data locally on your device and does not maintain user accounts or server-side profiles, you can exercise these rights by managing your data within the app (for example, removing your profile photo) or by uninstalling the app to delete all locally stored data.</p>
-            <p>For any requests or questions related to your data rights, please contact us at the email address listed below.</p>
-        </div>
-
-        <div class="section">
-            <h2>8. Security</h2>
-            <p>We take reasonable steps to minimize data use and keep information local where possible. However, no method of electronic storage or transmission can be guaranteed to be completely secure.</p>
-        </div>
-
-        <div class="section">
-            <h2>9. Your choices</h2>
-            <p>You can remove your profile photo at any time inside the app. You can also delete locally stored app data by uninstalling the app from your device.</p>
-        </div>
-
-        <div class="section">
-            <h2>10. Changes to this Privacy Policy</h2>
-            <p>We may update this Privacy Policy from time to time. If we make material changes, we will update the effective date above.</p>
-        </div>
-
-        <div class="section">
-            <h2>11. Contact</h2>
-            <p>If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us at:</p>
-            <p><strong>Email:</strong> <a href="mailto:kfk.apps.hushaby@gmail.com" style="color: #7c6dab; text-decoration: none;">kfk.apps.hushaby@gmail.com</a></p>
-        </div>
+        <div id="sections"></div>
 
         <div class="contact-box">
-            <a class="other-link" href="./delete-data.html">How to delete your data →</a>
+            <p>Have questions? Contact us at<br><a id="emailLink" href=""></a></p>
+            <div class="page-links">
+                <a class="page-link" id="deleteDataLink" href="./delete-data.html">How to delete your data →</a>
+                <a class="page-link" id="termsLink" href="./terms-of-use.html">Terms of Use →</a>
+            </div>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        © 2026 Hushaby. All rights reserved.
-    </footer>
+    <footer id="footer"></footer>
+
+    <script>
+        const policies = {
+            hushaby: {
+                title: 'Privacy Policy — Hushaby: Baby Sleep Sounds',
+                appName: 'Hushaby: Baby Sleep Sounds',
+                icon: '🌙',
+                dates: 'Effective date: May 6, 2026 · Last updated: May 9, 2026',
+                intro: 'Hushaby is designed to help families play lullabies and soothing sleep sounds for babies. We aim to collect as little data as possible and keep your experience simple and private.',
+                email: 'kfk.apps.hushaby@gmail.com',
+                footer: '© 2026 Hushaby. All rights reserved.',
+                sections: [
+                    {
+                        title: '1. Information we collect',
+                        paragraphs: [
+                            'Hushaby does not require account registration and does not operate its own backend for storing personal data.',
+                            'The app may process the following information locally on your device:',
+                            'Your profile photo is chosen by you through the system photo picker. The selected image is copied into the app storage on your device and is not uploaded by Hushaby to our servers.'
+                        ],
+                        list: [
+                            'your selected app language;',
+                            'your profile photo, if you choose one;',
+                            'favorites, onboarding progress, launch count, rating state, and subscription status needed for app functionality.'
+                        ],
+                        listAfter: 1
+                    },
+                    {
+                        title: '2. Photos and media access',
+                        paragraphs: [
+                            'Hushaby uses the system photo picker when you choose a profile picture. This means you select a specific image to share with the app. Hushaby does not request broad access to your photo library.'
+                        ]
+                    },
+                    {
+                        title: '3. How we use information',
+                        paragraphs: [
+                            'We use local app data only to provide app features, including:'
+                        ],
+                        list: [
+                            'showing your chosen profile photo;',
+                            'remembering your language and app preferences;',
+                            'restoring your app state on the same device;',
+                            'supporting purchases and subscription access.'
+                        ]
+                    },
+                    {
+                        title: '4. Sharing of information',
+                        paragraphs: [
+                            'Hushaby does not sell your personal data.',
+                            'We do not upload your profile photo or local profile data to our own servers. Some limited data may be processed by third-party service providers that support app purchases and billing functionality, such as RevenueCat and the app store provider, for example Google Play or Apple, in accordance with their own privacy terms.'
+                        ]
+                    },
+                    {
+                        title: '5. Data storage and retention',
+                        paragraphs: [
+                            'Data created by Hushaby is primarily stored locally on your device. Your profile photo remains on your device until you delete it in the app or remove the app from your device.'
+                        ]
+                    },
+                    {
+                        title: "6. Children's privacy",
+                        paragraphs: [
+                            'Hushaby is intended for parents and caregivers to use for baby sleep audio. The app is not designed to be operated by children.',
+                            'Hushaby does not knowingly collect personal information from children under 13. The app does not require registration, does not collect names, email addresses, or other identifiers from children, and does not include behavioral advertising or third-party tracking directed at children.',
+                            'If you are a parent or guardian and believe that your child has provided personal information through the app, please contact us at the email address listed below, and we will promptly take steps to delete such information.'
+                        ]
+                    },
+                    {
+                        title: '7. Rights of users in the European Economic Area (EEA)',
+                        paragraphs: [
+                            'If you are located in the European Economic Area, you have rights under the General Data Protection Regulation (GDPR), including the right to access, correct, or delete your personal data, and the right to restrict or object to its processing.',
+                            'Since Hushaby stores data locally on your device and does not maintain user accounts or server-side profiles, you can exercise these rights by managing your data within the app, for example removing your profile photo, or by uninstalling the app to delete all locally stored data.',
+                            'For any requests or questions related to your data rights, please contact us at the email address listed below.'
+                        ]
+                    },
+                    {
+                        title: '8. Security',
+                        paragraphs: [
+                            'We take reasonable steps to minimize data use and keep information local where possible. However, no method of electronic storage or transmission can be guaranteed to be completely secure.'
+                        ]
+                    },
+                    {
+                        title: '9. Your choices',
+                        paragraphs: [
+                            'You can remove your profile photo at any time inside the app. You can also delete locally stored app data by uninstalling the app from your device.'
+                        ]
+                    },
+                    {
+                        title: '10. Changes to this Privacy Policy',
+                        paragraphs: [
+                            'We may update this Privacy Policy from time to time. If we make material changes, we will update the effective date above.'
+                        ]
+                    },
+                    {
+                        title: '11. Contact',
+                        paragraphs: [
+                            'If you have questions about this Privacy Policy or wish to exercise your data rights, please contact us at kfk.apps.hushaby@gmail.com.'
+                        ]
+                    }
+                ]
+            },
+            onceupon: {
+                title: 'Privacy Policy — OnceUpon: Bedtime Stories',
+                appName: 'OnceUpon: Bedtime Stories',
+                icon: '📖',
+                dates: 'Effective date: June 22, 2026 · Last updated: June 22, 2026',
+                intro: 'OnceUpon is a family-oriented app for reading fairy tales, listening to selected audio stories, saving favorites, and using related bedtime or reading features.',
+                email: 'kitforkidsapps@gmail.com',
+                footer: '© 2026 OnceUpon. All rights reserved.',
+                sections: [
+                    {
+                        title: '1. Overview',
+                        paragraphs: [
+                            'The App does not require users to create an account with us. We do not ask users to provide their name, postal address, phone number, precise location, photos, contacts, microphone recordings, or camera access as part of the App’s core functionality.',
+                            'The App may process information locally on your device, and certain third-party services may process information to support subscriptions, purchases, advertising, app-store operations, security, and technical functionality.'
+                        ]
+                    },
+                    {
+                        title: '2. Information stored locally on your device',
+                        paragraphs: [
+                            'The App may store certain preferences on your device, including:'
+                        ],
+                        list: [
+                            'selected app language;',
+                            'favorite story identifiers;',
+                            'app state needed to provide reading, listening, or interface features.'
+                        ]
+                    },
+                    {
+                        title: '3. Purchases and subscriptions',
+                        paragraphs: [
+                            'The App offers paid Premium subscriptions, including monthly and yearly subscription options. Purchases are processed by the app store provider from which you downloaded the App, such as Apple App Store or Google Play.',
+                            'We do not directly collect or store your payment card number, bank account number, or full billing credentials.',
+                            'The App uses RevenueCat to help manage subscriptions, purchase validation, subscription status, entitlements, and restore-purchase functionality. RevenueCat and the applicable app store may process app user or installation identifiers, product identifiers, purchase and entitlement status, transaction or receipt information, device, platform, app version, and diagnostic information needed to provide subscription services.'
+                        ]
+                    },
+                    {
+                        title: '4. Advertising',
+                        paragraphs: [
+                            'The App may show advertising to users without an active Premium subscription, including interstitial ads that may appear before or during reading-related flows. Ads may be provided through Google AdMob.',
+                            'Depending on your device, region, consent choices, age-related settings, and platform rules, Google AdMob may process information such as device identifiers, advertising identifiers where permitted, IP address, approximate location inferred from network information, ad request information, ad impressions, ad interactions, crash or diagnostic information, and information needed to deliver, measure, limit, secure, and improve advertising.',
+                            'The App is configured to request child-directed treatment for ads and to use a maximum ad content rating suitable for general audiences. The App may also request non-personalized ads for interstitial reading ads. We do not knowingly use children’s personal information to create behavioral advertising profiles.',
+                            'If you are located in a region where consent is required for advertising or related storage, such as the European Economic Area, the United Kingdom, or Switzerland, the App or advertising partners may need to request consent before certain advertising features are used. If consent is not obtained where required, the App should request non-personalized or limited ads where supported.'
+                        ]
+                    },
+                    {
+                        title: '5. Information you provide when contacting us',
+                        paragraphs: [
+                            'If you contact us by email, we may receive your email address, message content, and any information you choose to include. We use this information to respond to your request, provide support, investigate issues, and keep reasonable support records.',
+                            'Please do not send sensitive personal information or children’s personal information unless it is necessary for your support request.'
+                        ]
+                    },
+                    {
+                        title: '6. Automatically processed technical information',
+                        paragraphs: [
+                            'The App, app stores, operating systems, and third-party SDKs may process technical information needed to operate the App, subscriptions, ads, and security. This may include device type, operating system, app version, language, country or region, installation or interaction events, diagnostics, crash logs, performance data, error information, and network information such as IP address when communicating with third-party services.',
+                            'The exact information processed can vary by platform, device settings, app version, region, and whether you use the free or Premium version.'
+                        ]
+                    },
+                    {
+                        title: '7. How we use information',
+                        paragraphs: [
+                            'We and our service providers may use information to operate and improve the App, remember app preferences, provide reading and audio features, manage Premium subscriptions and restore purchases, show and measure ads in the free version, keep ads age-appropriate, respond to support requests, troubleshoot technical problems, protect against fraud or misuse, and comply with legal obligations, app-store requirements, and third-party service terms.'
+                        ]
+                    },
+                    {
+                        title: '8. How information is shared',
+                        paragraphs: [
+                            'We may share information with service providers and platform partners that help operate the App, including Apple App Store and Google Play for app distribution and purchases, RevenueCat for subscription management, Google AdMob and Google services for advertising, and hosting, diagnostics, support, and security providers where needed.',
+                            'We may also disclose information if required by law, legal process, app-store rules, or to protect our rights, users, service providers, or the public.',
+                            'We do not sell children’s personal information. We do not knowingly create user profiles of children for behavioral advertising.'
+                        ]
+                    },
+                    {
+                        title: '9. Third-party services',
+                        paragraphs: [
+                            'The App integrates or may interact with third-party services. These services process information under their own terms and privacy policies. Relevant third-party services include RevenueCat for subscription and entitlement management, Google AdMob for advertising, and Apple App Store or Google Play for downloads, purchases, subscription billing, refunds, and store services.'
+                        ]
+                    },
+                    {
+                        title: '10. Children and family use',
+                        paragraphs: [
+                            'The App is designed for children and family use, and children should use the App only with the involvement and consent of a parent or legal guardian.',
+                            'We do not require children to create an account, and we do not knowingly request children to provide their name, email address, phone number, precise location, photos, contacts, or other personal contact information directly in the App.',
+                            'Some information may still be processed by app stores, operating systems, RevenueCat, Google AdMob, or other third-party SDKs to operate subscriptions, ads, security, diagnostics, and app functionality. For children, this processing should be limited to what is reasonably necessary for the App, subscription management, age-appropriate advertising, security, legal compliance, and support.',
+                            'If you are a parent or guardian and believe that a child has provided personal information to us by email or another support channel, contact us at kitforkidsapps@gmail.com. We will take reasonable steps to review, delete, or limit that information, unless retention is required by law or necessary for safety, fraud prevention, security, or dispute resolution.'
+                        ]
+                    },
+                    {
+                        title: '11. Your choices',
+                        paragraphs: [
+                            'Depending on your device, platform, and region, you may be able to change the selected language inside the App, remove favorites inside the App, delete the App to remove locally stored app data, manage or cancel subscriptions through Apple App Store or Google Play account settings, restore purchases in the App where available, limit ad tracking or reset advertising identifiers in device settings, or contact us for privacy assistance where applicable.',
+                            'Deleting the App does not automatically cancel an active subscription. Subscriptions must be canceled through the applicable app-store account settings.'
+                        ]
+                    },
+                    {
+                        title: '12. Data retention',
+                        paragraphs: [
+                            'Local app preferences may remain on your device until you change them, clear app data, uninstall the App, or your platform removes them.',
+                            'Subscription and purchase records may be retained by Apple, Google, RevenueCat, and/or us for as long as needed to provide subscription access, restore purchases, comply with legal and tax obligations, resolve disputes, enforce terms, and prevent fraud.',
+                            'Support emails may be retained for as long as reasonably necessary to respond to your request, maintain support history, comply with legal obligations, and protect our rights.'
+                        ]
+                    },
+                    {
+                        title: '13. Security',
+                        paragraphs: [
+                            'We use reasonable administrative, technical, and organizational measures designed to protect information. However, no app, network, storage system, or method of transmission is completely secure.'
+                        ]
+                    },
+                    {
+                        title: '14. Your privacy rights',
+                        paragraphs: [
+                            'Depending on where you live, you may have rights to request access, correction, deletion, portability, restriction, objection, withdrawal of consent, or information about how your personal information is processed. To make a privacy request, contact us at kitforkidsapps@gmail.com.'
+                        ]
+                    },
+                    {
+                        title: '15. Changes to this Privacy Policy',
+                        paragraphs: [
+                            'We may update this Privacy Policy from time to time. When we make material changes, we may notify you through the App, app-store metadata, or another reasonable method.'
+                        ]
+                    },
+                    {
+                        title: '16. Contact',
+                        paragraphs: [
+                            'If you have questions or requests about this Privacy Policy, contact us at kitforkidsapps@gmail.com.'
+                        ]
+                    }
+                ]
+            }
+        };
+
+        const tabs = document.querySelectorAll('.app-tab');
+        const appIcon = document.getElementById('appIcon');
+        const appName = document.getElementById('appName');
+        const dates = document.getElementById('dates');
+        const intro = document.getElementById('intro');
+        const sections = document.getElementById('sections');
+        const emailLink = document.getElementById('emailLink');
+        const footer = document.getElementById('footer');
+        const termsLink = document.getElementById('termsLink');
+        const deleteDataLink = document.getElementById('deleteDataLink');
+
+        function sectionTemplate(section) {
+            const listHtml = section.list
+                ? `<ul>${section.list.map(item => `<li>${item}</li>`).join('')}</ul>`
+                : '';
+
+            const listAfter = Number.isInteger(section.listAfter)
+                ? section.listAfter
+                : section.paragraphs.length;
+
+            const content = section.paragraphs
+                .map((paragraph, index) => {
+                    const paragraphHtml = `<p>${paragraph}</p>`;
+                    return index + 1 === listAfter ? paragraphHtml + listHtml : paragraphHtml;
+                })
+                .join('');
+
+            return `
+                <div class="section">
+                    <h2>${section.title}</h2>
+                    ${content}
+                </div>
+            `;
+        }
+
+        function setApp(appKey, updateUrl = true) {
+            const policy = policies[appKey] || policies.hushaby;
+
+            document.title = policy.title;
+            appIcon.textContent = policy.icon;
+            appName.textContent = policy.appName;
+            dates.textContent = policy.dates;
+            intro.textContent = policy.intro;
+            sections.innerHTML = policy.sections.map(sectionTemplate).join('');
+            emailLink.href = `mailto:${policy.email}`;
+            emailLink.textContent = policy.email;
+            footer.textContent = policy.footer;
+
+            termsLink.href = `./terms-of-use.html?app=${appKey}`;
+            deleteDataLink.href = `./delete-data.html?app=${appKey}`;
+
+            tabs.forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.app === appKey);
+            });
+
+            if (updateUrl) {
+                const url = new URL(window.location.href);
+                url.searchParams.set('app', appKey);
+                window.history.replaceState({}, '', url);
+            }
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => setApp(tab.dataset.app));
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const initialApp = params.get('app') === 'onceupon' ? 'onceupon' : 'hushaby';
+        setApp(initialApp, false);
+    </script>
 </body>
 </html>
