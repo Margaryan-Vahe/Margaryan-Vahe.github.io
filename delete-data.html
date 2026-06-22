@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delete Your Data — Hushaby: Baby Sleep Sounds</title>
+    <title>Delete Your Data - Kit For Kids Apps</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
 
@@ -20,10 +20,42 @@
         }
 
         .container {
-            max-width: 640px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 60px 24px 40px;
+            padding: 56px 24px 40px;
             flex: 1;
+            width: 100%;
+        }
+
+        .app-switcher {
+            display: flex;
+            gap: 8px;
+            padding: 6px;
+            background: #fff;
+            border: 1px solid #e8e4df;
+            border-radius: 999px;
+            margin: 0 auto 28px;
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .app-tab {
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: #6b6560;
+            cursor: pointer;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 16px;
+            transition: background 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .app-tab.active {
+            background: #7c6dab;
+            color: #fff;
         }
 
         .app-badge {
@@ -99,7 +131,10 @@
         .section p {
             font-size: 15px;
             color: #4a4a4a;
+            margin-bottom: 12px;
         }
+
+        .section p:last-child { margin-bottom: 0; }
 
         .info-box {
             background: #f0edf5;
@@ -114,9 +149,7 @@
             color: #5a5072;
         }
 
-        .info-box strong {
-            color: #3d3456;
-        }
+        .info-box strong { color: #3d3456; }
 
         .contact-box {
             text-align: center;
@@ -131,7 +164,8 @@
             font-weight: 500;
         }
 
-        .contact-box a:hover {
+        .contact-box a:hover,
+        .page-link:hover {
             text-decoration: underline;
         }
 
@@ -150,10 +184,6 @@
             text-decoration: none;
         }
 
-        .page-link:hover {
-            text-decoration: underline;
-        }
-
         footer {
             text-align: center;
             padding: 24px;
@@ -161,48 +191,155 @@
             color: #b0aaa3;
             border-top: 1px solid #e8e4df;
         }
+
+        @media (max-width: 520px) {
+            .container { padding-top: 32px; }
+            .app-switcher { width: 100%; }
+            .app-tab { flex: 1; padding-left: 10px; padding-right: 10px; }
+            h1 { font-size: 29px; }
+            .section { padding: 22px; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
+        <div class="app-switcher" aria-label="Choose application">
+            <button class="app-tab active" type="button" data-app="hushaby">Hushaby</button>
+            <button class="app-tab" type="button" data-app="onceupon">OnceUpon</button>
+        </div>
+
         <div class="app-badge">
-            <div class="icon">🌙</div>
-            Hushaby: Baby Sleep Sounds
+            <div class="icon" id="appIcon">🌙</div>
+            <span id="appName">Hushaby: Baby Sleep Sounds</span>
         </div>
 
         <h1>Delete Your Data</h1>
-        <p class="subtitle">Hushaby stores all your data locally on your device. No personal information is stored on our servers.</p>
+        <p class="subtitle" id="subtitle"></p>
 
-        <div class="section">
-            <h2><span class="step">1</span> Delete your profile photo</h2>
-            <p>Open Hushaby → go to Profile → click to cross button to remove photo → approve the action. The image will be permanently deleted from the app storage on your device.</p>
-        </div>
-
-        <div class="section">
-            <h2><span class="step">2</span> Delete all app data</h2>
-            <p>To delete all data stored by Hushaby (preferences, favorites, onboarding progress, and subscription state), simply uninstall the app from your device. All locally stored data will be removed automatically.</p>
-        </div>
-
-        <div class="section">
-            <h2><span class="step">3</span> Subscription data</h2>
-            <p>If you have an active subscription, uninstalling the app does not cancel it. To cancel your subscription, go to Google Play Store → Menu → Subscriptions → Hushaby → Cancel. Purchase history is managed by Google Play and RevenueCat in accordance with their privacy policies.</p>
-        </div>
-
-        <div class="info-box">
-            <p><strong>No server-side data to delete.</strong> Hushaby does not require account registration and does not store personal data on remote servers. Once you uninstall the app, your data is gone.</p>
-        </div>
+        <div id="sections"></div>
+        <div class="info-box" id="infoBox"></div>
 
         <div class="contact-box">
-            <p>Have questions? Contact us at<br><a href="mailto:kfk.apps.hushaby@gmail.com">kfk.apps.hushaby@gmail.com</a></p>
+            <p>Have questions? Contact us at<br><a id="emailLink" href=""></a></p>
             <div class="page-links">
-                <a class="page-link" href="./index.html">← Back to Privacy Policy</a>
-                <a class="page-link" href="./terms-of-use.html">Terms of Use →</a>
+                <a class="page-link" id="privacyLink" href="./index.html">Privacy Policy</a>
+                <a class="page-link" id="termsLink" href="./terms-of-use.html">Terms of Use</a>
             </div>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        © 2026 Hushaby. All rights reserved.
-    </footer>
+    <footer id="footer"></footer>
+
+    <script>
+        const deletePages = {
+            hushaby: {
+                title: 'Delete Your Data - Hushaby: Baby Sleep Sounds',
+                appName: 'Hushaby: Baby Sleep Sounds',
+                icon: '🌙',
+                subtitle: 'Hushaby stores your app data locally on your device. No personal information is stored on our own servers.',
+                email: 'kfk.apps.hushaby@gmail.com',
+                footer: '© 2026 Hushaby. All rights reserved.',
+                info: '<strong>No server-side data to delete.</strong> Hushaby does not require account registration and does not store personal data on remote servers. Once you uninstall the app, your local app data is removed from the device, except for records managed by Apple, Google, RevenueCat, or backups controlled by your platform settings.',
+                sections: [
+                    ['Delete your profile photo', [
+                        'Open Hushaby, go to Profile, tap the remove or close button for the profile photo, and approve the action. The image will be deleted from the app storage on your device.'
+                    ]],
+                    ['Delete all local app data', [
+                        'To delete all local data stored by Hushaby, including preferences, favorites, onboarding progress, launch count, rating state, and local subscription state, uninstall the app from your device.',
+                        'If your device backup settings sync app data, you may also need to manage or remove backups through Apple, Google, or your device settings.'
+                    ]],
+                    ['Subscription data', [
+                        'Uninstalling the app does not cancel an active subscription. To cancel your subscription, manage it through your Apple App Store or Google Play account settings.',
+                        'Purchase history and subscription records are managed by Apple, Google, and RevenueCat according to their own privacy policies and legal retention requirements.'
+                    ]]
+                ]
+            },
+            onceupon: {
+                title: 'Delete Your Data - OnceUpon: Bedtime Stories',
+                appName: 'OnceUpon: Bedtime Stories',
+                icon: '📖',
+                subtitle: 'OnceUpon stores app preferences such as selected language and favorite story identifiers locally on your device. Subscription and advertising data may be handled by app stores, RevenueCat, and Google AdMob.',
+                email: 'kitforkidsapps@gmail.com',
+                footer: '© 2026 OnceUpon. All rights reserved.',
+                info: '<strong>No account deletion is required.</strong> OnceUpon does not require account registration with us and does not maintain its own user account database. Some purchase, subscription, advertising, diagnostic, or store records may remain with Apple, Google, RevenueCat, or Google AdMob under their own policies and legal retention requirements.',
+                sections: [
+                    ['Remove favorites in the app', [
+                        'Open OnceUpon, go to a story card or story detail screen, and tap the favorite or heart button to remove a story from Favorites.',
+                        'Favorites are stored by story identifier on your device so the app can restore your favorites later.'
+                    ]],
+                    ['Delete local app data', [
+                        'To delete locally stored OnceUpon data, uninstall the app from your device. This removes local preferences such as selected language, favorite story identifiers, and app state stored by the app on that device.',
+                        'If your device backup settings sync app data, you may also need to manage or remove backups through Apple, Google, or your device settings.'
+                    ]],
+                    ['Subscriptions and purchases', [
+                        'Deleting the app does not cancel an active Premium subscription. To cancel your subscription, use your Apple App Store or Google Play account settings.',
+                        'Purchase history, receipts, subscription status, and entitlement records may be retained by Apple, Google, and RevenueCat for billing, restore-purchase, fraud prevention, tax, legal, and support purposes.'
+                    ]],
+                    ['Advertising data and choices', [
+                        'If you used the free, ad-supported version of OnceUpon, Google AdMob may process advertising-related information according to Google policies and your device settings.',
+                        'You can manage advertising choices through your device settings, Apple or Google privacy settings, ad personalization controls, or consent choices available in your region.'
+                    ]],
+                    ['Contact us for privacy requests', [
+                        'If you contacted us by email or need privacy assistance, email kitforkidsapps@gmail.com. We can review and delete support correspondence where required and where retention is not needed for legal, security, fraud-prevention, or dispute-resolution purposes.'
+                    ]]
+                ]
+            }
+        };
+
+        const tabs = document.querySelectorAll('.app-tab');
+        const appIcon = document.getElementById('appIcon');
+        const appName = document.getElementById('appName');
+        const subtitle = document.getElementById('subtitle');
+        const sections = document.getElementById('sections');
+        const infoBox = document.getElementById('infoBox');
+        const emailLink = document.getElementById('emailLink');
+        const footer = document.getElementById('footer');
+        const privacyLink = document.getElementById('privacyLink');
+        const termsLink = document.getElementById('termsLink');
+
+        function sectionTemplate(section, index) {
+            const [title, paragraphs] = section;
+            return `
+                <div class="section">
+                    <h2><span class="step">${index + 1}</span>${title}</h2>
+                    ${paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
+                </div>
+            `;
+        }
+
+        function setApp(appKey, updateUrl = true) {
+            const data = deletePages[appKey] || deletePages.hushaby;
+
+            document.title = data.title;
+            appIcon.textContent = data.icon;
+            appName.textContent = data.appName;
+            subtitle.textContent = data.subtitle;
+            sections.innerHTML = data.sections.map(sectionTemplate).join('');
+            infoBox.innerHTML = `<p>${data.info}</p>`;
+            emailLink.href = `mailto:${data.email}`;
+            emailLink.textContent = data.email;
+            footer.textContent = data.footer;
+            privacyLink.href = `./index.html?app=${appKey}`;
+            termsLink.href = `./terms-of-use.html?app=${appKey}`;
+
+            tabs.forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.app === appKey);
+            });
+
+            if (updateUrl) {
+                const url = new URL(window.location.href);
+                url.searchParams.set('app', appKey);
+                window.history.replaceState({}, '', url);
+            }
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => setApp(tab.dataset.app));
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const initialApp = params.get('app') === 'onceupon' ? 'onceupon' : 'hushaby';
+        setApp(initialApp, false);
+    </script>
 </body>
 </html>
