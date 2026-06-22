@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Use — Hushaby: Baby Sleep Sounds</title>
+    <title>Terms of Use - Kit For Kids Apps</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&display=swap');
 
@@ -20,10 +20,42 @@
         }
 
         .container {
-            max-width: 640px;
+            max-width: 720px;
             margin: 0 auto;
-            padding: 60px 24px 40px;
+            padding: 56px 24px 40px;
             flex: 1;
+            width: 100%;
+        }
+
+        .app-switcher {
+            display: flex;
+            gap: 8px;
+            padding: 6px;
+            background: #fff;
+            border: 1px solid #e8e4df;
+            border-radius: 999px;
+            margin: 0 auto 28px;
+            width: fit-content;
+            max-width: 100%;
+        }
+
+        .app-tab {
+            border: 0;
+            border-radius: 999px;
+            background: transparent;
+            color: #6b6560;
+            cursor: pointer;
+            font: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 9px 16px;
+            transition: background 0.2s ease, color 0.2s ease;
+            white-space: nowrap;
+        }
+
+        .app-tab.active {
+            background: #7c6dab;
+            color: #fff;
         }
 
         .app-badge {
@@ -91,9 +123,7 @@
             margin-bottom: 12px;
         }
 
-        .section p:last-child {
-            margin-bottom: 0;
-        }
+        .section p:last-child { margin-bottom: 0; }
 
         .contact-box {
             text-align: center;
@@ -108,20 +138,24 @@
             font-weight: 500;
         }
 
-        .contact-box a:hover {
+        .contact-box a:hover,
+        .page-link:hover {
             text-decoration: underline;
+        }
+
+        .page-links {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+            margin-top: 16px;
         }
 
         .page-link {
             display: inline-block;
-            margin-top: 16px;
             font-size: 14px;
             color: #7c6dab;
             text-decoration: none;
-        }
-
-        .page-link:hover {
-            text-decoration: underline;
         }
 
         footer {
@@ -131,86 +165,221 @@
             color: #b0aaa3;
             border-top: 1px solid #e8e4df;
         }
+
+        @media (max-width: 520px) {
+            .container { padding-top: 32px; }
+            .app-switcher { width: 100%; }
+            .app-tab { flex: 1; padding-left: 10px; padding-right: 10px; }
+            h1 { font-size: 29px; }
+            .section { padding: 22px; }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
+        <div class="app-switcher" aria-label="Choose application">
+            <button class="app-tab active" type="button" data-app="hushaby">Hushaby</button>
+            <button class="app-tab" type="button" data-app="onceupon">OnceUpon</button>
+        </div>
+
         <div class="app-badge">
-            <div class="icon">🌙</div>
-            Hushaby: Baby Sleep Sounds
+            <div class="icon" id="appIcon">🌙</div>
+            <span id="appName">Hushaby: Baby Sleep Sounds</span>
         </div>
 
         <h1>Terms of Use</h1>
-        <p class="dates">Effective date: May 28, 2026</p>
-        <p class="intro">These Terms of Use govern your use of Hushaby. By using the app, you agree to these Terms.</p>
+        <p class="dates" id="dates"></p>
+        <p class="intro" id="intro"></p>
 
-        <div class="section">
-            <h2>1. About Hushaby</h2>
-            <p>Hushaby is a mobile app designed to help parents and caregivers play lullabies, music box melodies, nature sounds, and other soothing sleep audio.</p>
-            <p>The app is intended for use by adults, parents, and caregivers. It is not designed to be operated by children.</p>
-        </div>
-
-        <div class="section">
-            <h2>2. Free and Premium Access</h2>
-            <p>Hushaby may provide some content and features for free. Premium access unlocks additional lullabies, sounds, favorites, sleep timer options, and other premium features shown in the app.</p>
-            <p>Available features may change over time as the app is updated.</p>
-        </div>
-
-        <div class="section">
-            <h2>3. Subscriptions</h2>
-            <p>Hushaby offers auto-renewable subscription plans, including monthly and yearly plans.</p>
-            <p>A subscription gives you access to premium features while the subscription is active. Subscription prices, billing periods, free trial availability, and renewal terms are shown in the app before purchase.</p>
-            <p>If a free trial is offered, you will not be charged until the trial period ends. After the trial ends, the subscription will automatically renew unless you cancel it before the end of the trial period.</p>
-        </div>
-
-        <div class="section">
-            <h2>4. Billing and Renewal</h2>
-            <p>Subscriptions are purchased through the Apple App Store or Google Play, depending on your device.</p>
-            <p>Payment will be charged to your Apple ID or Google Play account at confirmation of purchase. Your subscription automatically renews unless auto-renewal is turned off before the end of the current billing period.</p>
-            <p>You can manage or cancel your subscription in your App Store or Google Play account settings.</p>
-        </div>
-
-        <div class="section">
-            <h2>5. Cancellation and Refunds</h2>
-            <p>You may cancel your subscription at any time through your App Store or Google Play account settings.</p>
-            <p>After cancellation, you will continue to have access to premium features until the end of the current paid billing period.</p>
-            <p>Refunds are handled by Apple or Google according to their own refund policies. Hushaby does not directly process subscription payments or refunds.</p>
-        </div>
-
-        <div class="section">
-            <h2>6. Acceptable Use</h2>
-            <p>You agree not to misuse the app, copy or redistribute app content outside the app, attempt to bypass premium access, reverse engineer the app, or use the app in a way that violates applicable laws.</p>
-        </div>
-
-        <div class="section">
-            <h2>7. Health and Sleep Disclaimer</h2>
-            <p>Hushaby provides audio content for relaxation and sleep support. The app is not a medical product and does not provide medical advice, diagnosis, or treatment.</p>
-            <p>If you have concerns about your baby's sleep, health, or wellbeing, please consult a qualified healthcare professional.</p>
-        </div>
-
-        <div class="section">
-            <h2>8. Privacy</h2>
-            <p>Your use of Hushaby is also subject to our Privacy Policy, which explains how the app handles data.</p>
-        </div>
-
-        <div class="section">
-            <h2>9. Changes to These Terms</h2>
-            <p>We may update these Terms from time to time. If we make changes, we will update the effective date above. Continued use of the app after changes means you accept the updated Terms.</p>
-        </div>
-
-        <div class="section">
-            <h2>10. Contact</h2>
-            <p>If you have questions about these Terms, please contact us:</p>
-            <p><strong>Email:</strong> <a href="mailto:kfk.apps.hushaby@gmail.com" style="color: #7c6dab; text-decoration: none;">kfk.apps.hushaby@gmail.com</a></p>
-        </div>
+        <div id="sections"></div>
 
         <div class="contact-box">
-            <a class="page-link" href="./delete-data.html">← Back to Delete Your Data</a>
+            <p>Have questions? Contact us at<br><a id="emailLink" href=""></a></p>
+            <div class="page-links">
+                <a class="page-link" id="privacyLink" href="./index.html">Privacy Policy</a>
+                <a class="page-link" id="deleteDataLink" href="./delete-data.html">Delete Your Data</a>
+            </div>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        © 2026 Hushaby. All rights reserved.
-    </footer>
+    <footer id="footer"></footer>
+
+    <script>
+        const terms = {
+            hushaby: {
+                title: 'Terms of Use - Hushaby: Baby Sleep Sounds',
+                appName: 'Hushaby: Baby Sleep Sounds',
+                icon: '🌙',
+                dates: 'Effective date: May 28, 2026',
+                intro: 'These Terms of Use govern your use of Hushaby. By using the app, you agree to these Terms.',
+                email: 'kfk.apps.hushaby@gmail.com',
+                footer: '© 2026 Hushaby. All rights reserved.',
+                sections: [
+                    ['1. About Hushaby', [
+                        'Hushaby is a mobile app designed to help parents and caregivers play lullabies, music box melodies, nature sounds, and other soothing sleep audio.',
+                        'The app is intended for use by adults, parents, and caregivers. It is not designed to be operated by children.'
+                    ]],
+                    ['2. Free and Premium Access', [
+                        'Hushaby may provide some content and features for free. Premium access unlocks additional lullabies, sounds, favorites, sleep timer options, and other premium features shown in the app.',
+                        'Available features may change over time as the app is updated.'
+                    ]],
+                    ['3. Subscriptions', [
+                        'Hushaby offers auto-renewable subscription plans, including monthly and yearly plans.',
+                        'A subscription gives you access to premium features while the subscription is active. Subscription prices, billing periods, free trial availability, and renewal terms are shown in the app before purchase.',
+                        'If a free trial is offered, you will not be charged until the trial period ends. After the trial ends, the subscription will automatically renew unless you cancel it before the end of the trial period.'
+                    ]],
+                    ['4. Billing and Renewal', [
+                        'Subscriptions are purchased through the Apple App Store or Google Play, depending on your device.',
+                        'Payment will be charged to your Apple ID or Google Play account at confirmation of purchase. Your subscription automatically renews unless auto-renewal is turned off before the end of the current billing period.',
+                        'You can manage or cancel your subscription in your App Store or Google Play account settings.'
+                    ]],
+                    ['5. Cancellation and Refunds', [
+                        'You may cancel your subscription at any time through your App Store or Google Play account settings.',
+                        'After cancellation, you will continue to have access to premium features until the end of the current paid billing period.',
+                        'Refunds are handled by Apple or Google according to their own refund policies. Hushaby does not directly process subscription payments or refunds.'
+                    ]],
+                    ['6. Acceptable Use', [
+                        'You agree not to misuse the app, copy or redistribute app content outside the app, attempt to bypass premium access, reverse engineer the app, or use the app in a way that violates applicable laws.'
+                    ]],
+                    ['7. Health and Sleep Disclaimer', [
+                        'Hushaby provides audio content for relaxation and sleep support. The app is not a medical product and does not provide medical advice, diagnosis, or treatment.',
+                        "If you have concerns about your baby's sleep, health, or wellbeing, please consult a qualified healthcare professional."
+                    ]],
+                    ['8. Privacy', [
+                        'Your use of Hushaby is also subject to our Privacy Policy, which explains how the app handles data.'
+                    ]],
+                    ['9. Changes to These Terms', [
+                        'We may update these Terms from time to time. If we make changes, we will update the effective date above. Continued use of the app after changes means you accept the updated Terms.'
+                    ]],
+                    ['10. Contact', [
+                        'If you have questions about these Terms, please contact us at kfk.apps.hushaby@gmail.com.'
+                    ]]
+                ]
+            },
+            onceupon: {
+                title: 'Terms of Use - OnceUpon: Bedtime Stories',
+                appName: 'OnceUpon: Bedtime Stories',
+                icon: '📖',
+                dates: 'Effective date: June 22, 2026 · Last updated: June 22, 2026',
+                intro: 'These Terms govern your access to and use of OnceUpon: Bedtime Stories and related app content, features, subscriptions, and services.',
+                email: 'kitforkidsapps@gmail.com',
+                footer: '© 2026 OnceUpon. All rights reserved.',
+                sections: [
+                    ['1. App Provider and Contact', [
+                        'The App is provided by Kit For Kids. You can contact us at kitforkidsapps@gmail.com.'
+                    ]],
+                    ['2. The App', [
+                        'OnceUpon: Bedtime Stories is a digital library of fairy tales for children and families. The App may allow users to read stories, listen to selected audio stories, save favorite stories, choose an app language, and use related bedtime or reading features.',
+                        'The App is intended to support calm reading and listening moments. It is not a substitute for parental supervision, education, medical advice, sleep advice, or professional guidance.'
+                    ]],
+                    ['3. Eligibility and Children', [
+                        'The App is designed for family use and may be used by children only with the involvement and consent of a parent or legal guardian. If you allow a child to use the App, you are responsible for supervising that use and for ensuring that the child follows these Terms.'
+                    ]],
+                    ['4. License to Use the App', [
+                        'Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to install and use the App for personal, non-commercial use on devices that you own or control, as permitted by the rules of the app store from which you downloaded the App.',
+                        'You may not copy, modify, distribute, sell, lease, sublicense, reverse engineer, decompile, attempt to extract source code from, or create derivative works based on the App, except where such restrictions are prohibited by applicable law.'
+                    ]],
+                    ['5. Content and Intellectual Property', [
+                        'The App, including its design, software, text, illustrations, audio, logos, and other materials, is owned by us or our licensors and is protected by copyright, trademark, and other laws.',
+                        'You may use App content only inside the App for personal and family use. You may not reproduce, publish, upload, distribute, commercially exploit, or create derivative works from App content without our prior written permission, except as allowed by applicable law.'
+                    ]],
+                    ['6. Free Version, Advertising, and Premium Access', [
+                        'The App may offer a free, ad-supported version. Users without an active Premium subscription may see advertising, including interstitial ads, in connection with reading or using the App. Ads are provided through third-party advertising services, including Google AdMob.',
+                        'The App may also offer Premium access through paid subscriptions. Premium access may include features such as access to audio stories, an audio sleep timer, regular content updates, and other paid features shown in the App at the time of purchase.'
+                    ]],
+                    ['7. Subscriptions and Billing', [
+                        'The App offers auto-renewable subscriptions, including monthly and yearly subscription options. Subscription prices, billing periods, renewal terms, and available offers are shown in the App and/or in the applicable app store purchase screen before you confirm a purchase.',
+                        'Payments are processed by the app store provider from which you downloaded the App, such as Apple App Store or Google Play. We do not directly collect or store your payment card details.',
+                        'Unless canceled, subscriptions automatically renew at the end of each billing period according to the rules and terms of the applicable app store. You can manage or cancel your subscription through your app store account settings. Deleting the App does not cancel your subscription.'
+                    ]],
+                    ['8. Restore Purchases and Refunds', [
+                        'The App uses RevenueCat to help manage subscription status and entitlement access. If you reinstall the App or switch devices, you may need to restore purchases through the App or through your app store account.',
+                        'Purchases and subscriptions are billed by the applicable app store. Refund requests, if available, must be submitted to Apple, Google, or the relevant store provider under their policies.'
+                    ]],
+                    ['9. Third-Party Services and Privacy', [
+                        'The App may use third-party services, including RevenueCat for subscription management and Google AdMob for advertising. Your use of the App is also governed by our Privacy Policy.'
+                    ]],
+                    ['10. Acceptable Use', [
+                        'You agree not to misuse the App or use it in a way that could damage, disable, overload, interfere with, or compromise the App, our systems, third-party services, or other users.',
+                        'You also agree not to attempt to bypass subscriptions, ads, security measures, access controls, or technical limitations.'
+                    ]],
+                    ['11. Updates, No Warranty, and Limitation of Liability', [
+                        'We may update, improve, suspend, remove, or discontinue any part of the App or its content at any time.',
+                        'The App is provided on an as is and as available basis. To the maximum extent permitted by applicable law, we disclaim warranties and limit liability for indirect, incidental, special, consequential, exemplary, or punitive damages.'
+                    ]],
+                    ['12. Apple App Store Additional Terms', [
+                        'If you downloaded the App from the Apple App Store, you acknowledge that these Terms are between you and us, not Apple. Apple is not responsible for the App or its content. Apple and Apple’s subsidiaries are third-party beneficiaries of these Terms and may enforce these Terms against you.',
+                        'Apple has no obligation to provide maintenance or support services for the App. We are responsible for providing support for the App as described in these Terms or as required by applicable law.',
+                        'We, not Apple, are responsible for addressing claims relating to the App or your possession and use of the App, including product liability claims, consumer protection claims, legal or regulatory claims, and intellectual property claims.',
+                        'You represent and warrant that you are not located in a country or region subject to a U.S. government embargo or designated by the U.S. government as a terrorist-supporting country, and that you are not listed on any U.S. government list of prohibited or restricted parties.'
+                    ]],
+                    ['13. Google Play Additional Terms', [
+                        'If you downloaded the App from Google Play, your use of the App must comply with Google Play terms, policies, and billing rules.'
+                    ]],
+                    ['14. Governing Law', [
+                        'These Terms are governed by the laws of the Republic of Armenia, without regard to conflict-of-law rules, except where mandatory consumer protection laws in your country of residence require another governing law, forum, or venue.'
+                    ]],
+                    ['15. Contact', [
+                        'If you have questions about these Terms or the App, contact us at kitforkidsapps@gmail.com.'
+                    ]]
+                ]
+            }
+        };
+
+        const tabs = document.querySelectorAll('.app-tab');
+        const appIcon = document.getElementById('appIcon');
+        const appName = document.getElementById('appName');
+        const dates = document.getElementById('dates');
+        const intro = document.getElementById('intro');
+        const sections = document.getElementById('sections');
+        const emailLink = document.getElementById('emailLink');
+        const footer = document.getElementById('footer');
+        const privacyLink = document.getElementById('privacyLink');
+        const deleteDataLink = document.getElementById('deleteDataLink');
+
+        function sectionTemplate(section) {
+            const [title, paragraphs] = section;
+            return `
+                <div class="section">
+                    <h2>${title}</h2>
+                    ${paragraphs.map(paragraph => `<p>${paragraph}</p>`).join('')}
+                </div>
+            `;
+        }
+
+        function setApp(appKey, updateUrl = true) {
+            const data = terms[appKey] || terms.hushaby;
+
+            document.title = data.title;
+            appIcon.textContent = data.icon;
+            appName.textContent = data.appName;
+            dates.textContent = data.dates;
+            intro.textContent = data.intro;
+            sections.innerHTML = data.sections.map(sectionTemplate).join('');
+            emailLink.href = `mailto:${data.email}`;
+            emailLink.textContent = data.email;
+            footer.textContent = data.footer;
+            privacyLink.href = `./index.html?app=${appKey}`;
+            deleteDataLink.href = `./delete-data.html?app=${appKey}`;
+
+            tabs.forEach(tab => {
+                tab.classList.toggle('active', tab.dataset.app === appKey);
+            });
+
+            if (updateUrl) {
+                const url = new URL(window.location.href);
+                url.searchParams.set('app', appKey);
+                window.history.replaceState({}, '', url);
+            }
+        }
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => setApp(tab.dataset.app));
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        const initialApp = params.get('app') === 'onceupon' ? 'onceupon' : 'hushaby';
+        setApp(initialApp, false);
+    </script>
 </body>
 </html>
