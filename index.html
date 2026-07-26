@@ -37,6 +37,7 @@
             margin: 0 auto 28px;
             width: fit-content;
             max-width: 100%;
+            overflow-x: auto;
         }
 
         .app-tab {
@@ -127,6 +128,16 @@
             margin-bottom: 0;
         }
 
+        .section a {
+            color: #7c6dab;
+            font-weight: 500;
+            text-decoration: none;
+        }
+
+        .section a:hover {
+            text-decoration: underline;
+        }
+
         .section ul {
             list-style: none;
             padding: 0;
@@ -202,7 +213,7 @@
             }
 
             .app-tab {
-                flex: 1;
+                flex: 0 0 auto;
                 padding-left: 10px;
                 padding-right: 10px;
             }
@@ -219,9 +230,10 @@
 </head>
 <body>
     <main class="container">
-        <div class="app-switcher" aria-label="Choose application">
-            <button class="app-tab active" type="button" data-app="hushaby">Hushaby</button>
-            <button class="app-tab" type="button" data-app="onceupon">OnceUpon</button>
+        <div class="app-switcher" role="tablist" aria-label="Choose application">
+            <button class="app-tab active" role="tab" aria-selected="true" type="button" data-app="hushaby">Hushaby</button>
+            <button class="app-tab" role="tab" aria-selected="false" type="button" data-app="onceupon">OnceUpon</button>
+            <button class="app-tab" role="tab" aria-selected="false" type="button" data-app="yeartracker">YearTracker</button>
         </div>
 
         <div class="app-badge">
@@ -237,7 +249,7 @@
 
         <div class="contact-box">
             <p>Have questions? Contact us at<br><a id="emailLink" href=""></a></p>
-            <div class="page-links">
+            <div class="page-links" id="pageLinks">
                 <a class="page-link" id="deleteDataLink" href="./delete-data.html">How to delete your data →</a>
                 <a class="page-link" id="termsLink" href="./terms-of-use.html">Terms of Use →</a>
             </div>
@@ -471,6 +483,132 @@
                         ]
                     }
                 ]
+            },
+            yeartracker: {
+                title: 'Privacy Policy — YearTracker: Year Activity Map',
+                appName: 'YearTracker: Year Activity Map',
+                icon: '🗓️',
+                dates: 'Effective date: July 26, 2026 · Last updated: July 26, 2026',
+                intro: 'YearTracker helps you plan tasks, view your activity across the year, track progress, schedule local reminders, and optionally import selected items from Apple Reminders. This Privacy Policy explains how information is handled when you use the app.',
+                email: 'kitforkidsapps@gmail.com',
+                footer: '© 2026 YearTracker. All rights reserved.',
+                showUtilityLinks: false,
+                sections: [
+                    {
+                        title: '1. Overview',
+                        paragraphs: [
+                            'YearTracker is provided by Vage Margarian (“we”, “us”, or “our”). The app does not require you to create an account and does not operate its own server or backend for storing your tasks or personal profile.',
+                            'Most information created or imported in YearTracker is stored locally on your device. The app also uses Google AdMob to display advertising, and Google may process limited device, advertising, usage, and diagnostic information as described below.'
+                        ]
+                    },
+                    {
+                        title: '2. Information stored locally on your device',
+                        paragraphs: [
+                            'YearTracker may store the following information locally on your device:'
+                        ],
+                        list: [
+                            'task titles, notes, scheduled dates and times;',
+                            'task completion status, repeat settings, rescheduling history, and yearly activity statistics;',
+                            'selected language and app preferences;',
+                            'selected Apple Reminders list identifiers, synchronization status, and locally imported read-only task copies;',
+                            'local settings used to control task notifications and banner visibility.'
+                        ]
+                    },
+                    {
+                        title: '3. Apple Reminders access',
+                        paragraphs: [
+                            'Apple Reminders integration is optional. YearTracker requests full access to Reminders only after you choose to connect the integration and the system displays Apple’s permission prompt.',
+                            'If you grant access, YearTracker reads reminders from the lists you select and creates local read-only copies so they can appear in your yearly task view. This may include reminder titles, notes, due dates, completion status, list names, and technical identifiers required to synchronize those reminders.',
+                            'YearTracker does not upload the contents of your reminders to our own servers and does not use your task or reminder content for advertising. You can disconnect the integration inside the app and revoke Reminders permission at any time in iOS Settings.'
+                        ]
+                    },
+                    {
+                        title: '4. Notifications',
+                        paragraphs: [
+                            'If you enable a time for a task and allow notifications, YearTracker may schedule local notifications on your device. These notifications can contain the task title and reminder text.',
+                            'YearTracker uses local notifications and does not operate a remote push-notification server. You can disable notification permission in iOS Settings at any time.'
+                        ]
+                    },
+                    {
+                        title: '5. Advertising and Google AdMob',
+                        paragraphs: [
+                            'YearTracker may display banner advertising provided by Google AdMob. Depending on your device, region, consent choices, Google settings, and applicable law, Google Mobile Ads and related services may process information such as IP address, approximate location inferred from network information, device or app identifiers, advertising data, ad impressions and interactions, product interaction data, crash data, performance data, and other diagnostic information.',
+                            'Google may use this information to deliver and measure ads, limit ad frequency, detect fraud and abuse, maintain security, provide analytics, and improve advertising services. YearTracker does not provide Google with your task titles, task notes, Apple Reminders content, or yearly productivity statistics for ad targeting.',
+                            'Google processes information under its own privacy terms. You can learn more in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and Google’s information about <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Mobile Ads data disclosure</a>.'
+                        ]
+                    },
+                    {
+                        title: '6. Advertising consent and tracking choices',
+                        paragraphs: [
+                            'Where required by law, YearTracker or Google’s consent platform may ask for your advertising privacy choices before requesting ads. The available advertising mode may vary depending on your region and consent decision.',
+                            'If iOS tracking permission is requested, you may allow or deny it through Apple’s system prompt and later change it in iOS Settings under Privacy & Security → Tracking. Denying tracking permission does not prevent you from using YearTracker.',
+                            'When Google requires a privacy-options entry point, you can review or update eligible advertising consent choices from the app settings.'
+                        ]
+                    },
+                    {
+                        title: '7. How information is used',
+                        paragraphs: [
+                            'Local information is used to provide YearTracker features, including creating and displaying tasks, calculating yearly progress and activity statistics, remembering preferences, importing selected Apple Reminders, and scheduling local notifications.',
+                            'Advertising-related information processed by Google is used for ad delivery, measurement, analytics, security, fraud prevention, and related advertising functionality.'
+                        ]
+                    },
+                    {
+                        title: '8. How information is shared',
+                        paragraphs: [
+                            'We do not sell your task content, reminder content, or locally stored YearTracker data.',
+                            'Information may be processed by Apple as part of iOS, App Store distribution, permission management, Reminders, and local-notification functionality, and by Google in connection with AdMob advertising and consent management. These companies process information under their own terms and privacy policies.',
+                            'We may disclose information you send to us directly if required by law, legal process, or reasonably necessary to protect users, our rights, or the security of the app.'
+                        ]
+                    },
+                    {
+                        title: '9. Support communications',
+                        paragraphs: [
+                            'If you contact us by email, we may receive your email address, message, and any information you choose to include. We use this information to respond to your request, investigate problems, and maintain reasonable support records.',
+                            'Please do not include sensitive personal information or private task and reminder content unless it is necessary for your support request.'
+                        ]
+                    },
+                    {
+                        title: '10. Data retention and deletion',
+                        paragraphs: [
+                            'Tasks, preferences, statistics, and imported reminder copies remain on your device until you delete them, remove imported items through the app, clear the app’s data where supported, or uninstall YearTracker.',
+                            'Disconnecting Apple Reminders lets you choose whether to keep or remove locally imported copies. Revoking Reminders permission prevents further access but may not automatically delete copies already stored in YearTracker.',
+                            'Advertising data is retained by Google according to Google’s policies and your applicable settings. Support emails may be retained as reasonably necessary to answer your request, maintain support history, comply with legal obligations, and protect our rights.'
+                        ]
+                    },
+                    {
+                        title: '11. Your choices and rights',
+                        paragraphs: [
+                            'You can delete local tasks inside YearTracker, disconnect Apple Reminders, remove imported copies, revoke Reminders or notification permissions in iOS Settings, manage eligible advertising choices in the app or device settings, and uninstall the app to remove its locally stored data.',
+                            'Depending on where you live, you may have rights to request access, correction, deletion, restriction, objection, withdrawal of consent, or information about personal data that we control. Because YearTracker has no user accounts or server-side task database, we generally cannot access or remotely delete data stored only on your device.',
+                            'For privacy questions or requests concerning information you sent directly to us, contact us using the email address below.'
+                        ]
+                    },
+                    {
+                        title: "12. Children's privacy",
+                        paragraphs: [
+                            'YearTracker is a general productivity app and is not specifically directed to children under 13. The app does not require an account and does not knowingly ask children to provide names, email addresses, precise location, contacts, photos, or other personal contact information.',
+                            'If you believe a child has provided personal information to us through a support request, contact us and we will take reasonable steps to review and delete it where appropriate.'
+                        ]
+                    },
+                    {
+                        title: '13. Security',
+                        paragraphs: [
+                            'We minimize collection and keep task-related information on the device where possible. We use reasonable measures designed to protect information, but no device, storage system, network, or method of transmission can be guaranteed to be completely secure.'
+                        ]
+                    },
+                    {
+                        title: '14. Changes to this Privacy Policy',
+                        paragraphs: [
+                            'We may update this Privacy Policy to reflect changes to YearTracker, third-party services, legal requirements, or our practices. When changes are made, we will update the “Last updated” date above and may provide additional notice when appropriate.'
+                        ]
+                    },
+                    {
+                        title: '15. Contact',
+                        paragraphs: [
+                            'If you have questions or requests regarding this Privacy Policy, contact Vage Margarian at kitforkidsapps@gmail.com.'
+                        ]
+                    }
+                ]
             }
         };
 
@@ -484,6 +622,7 @@
         const footer = document.getElementById('footer');
         const termsLink = document.getElementById('termsLink');
         const deleteDataLink = document.getElementById('deleteDataLink');
+        const pageLinks = document.getElementById('pageLinks');
 
         function sectionTemplate(section) {
             const listHtml = section.list
@@ -524,9 +663,12 @@
 
             termsLink.href = `./terms-of-use.html?app=${appKey}`;
             deleteDataLink.href = `./delete-data.html?app=${appKey}`;
+            pageLinks.style.display = policy.showUtilityLinks === false ? 'none' : 'flex';
 
             tabs.forEach(tab => {
-                tab.classList.toggle('active', tab.dataset.app === appKey);
+                const isActive = tab.dataset.app === appKey;
+                tab.classList.toggle('active', isActive);
+                tab.setAttribute('aria-selected', String(isActive));
             });
 
             if (updateUrl) {
@@ -541,7 +683,10 @@
         });
 
         const params = new URLSearchParams(window.location.search);
-        const initialApp = params.get('app') === 'onceupon' ? 'onceupon' : 'hushaby';
+        const requestedApp = params.get('app');
+        const initialApp = Object.prototype.hasOwnProperty.call(policies, requestedApp)
+            ? requestedApp
+            : 'hushaby';
         setApp(initialApp, false);
     </script>
 </body>
