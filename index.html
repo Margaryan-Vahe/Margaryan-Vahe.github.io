@@ -83,6 +83,37 @@
             font-size: 16px;
         }
 
+        .app-badge .icon.intende-icon {
+            position: relative;
+            background: linear-gradient(135deg, #7c6dab, #a78bba);
+            border-radius: 50%;
+            font-size: 0;
+        }
+
+        .app-badge .icon.intende-icon::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 6px;
+            width: 4px;
+            height: 11px;
+            border-radius: 999px;
+            background: #1b1f1b;
+            transform: translateX(-50%);
+        }
+
+        .app-badge .icon.intende-icon::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 5px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #47664a;
+            transform: translateX(-50%);
+        }
+
         h1 {
             font-size: 32px;
             font-weight: 600;
@@ -234,6 +265,7 @@
             <button class="app-tab active" role="tab" aria-selected="true" type="button" data-app="hushaby">Hushaby</button>
             <button class="app-tab" role="tab" aria-selected="false" type="button" data-app="onceupon">OnceUpon</button>
             <button class="app-tab" role="tab" aria-selected="false" type="button" data-app="yeartracker">YearTracker</button>
+            <button class="app-tab" role="tab" aria-selected="false" type="button" data-app="intende">Intende</button>
         </div>
 
         <div class="app-badge">
@@ -609,6 +641,139 @@
                         ]
                     }
                 ]
+            },
+            intende: {
+                title: 'Privacy Policy — Intende',
+                appName: 'Intende: Focus & Screen Time',
+                icon: 'i',
+                dates: 'Effective date: August 7, 2026 · Last updated: August 7, 2026',
+                intro: 'Intende helps you focus, set a daily Screen Time limit for selected apps, and temporarily reduce digital distractions. This Privacy Policy explains how information is handled when you use Intende.',
+                email: 'kitforkidsapps@gmail.com',
+                footer: '© 2026 Intende. All rights reserved.',
+                showUtilityLinks: false,
+                sections: [
+                    {
+                        title: '1. Overview',
+                        paragraphs: [
+                            'Intende is provided by Vage Margarian (“we”, “us”, or “our”). The app does not require you to create an account and does not operate its own server or backend for storing a personal profile, focus sessions, Screen Time selections, or daily-limit settings.',
+                            'Most information used by Intende is stored locally on your device. Certain third-party services may process limited information to provide advertising, subscriptions, purchases, app-store functionality, security, and technical operations.'
+                        ]
+                    },
+                    {
+                        title: '2. Information stored locally on your device',
+                        paragraphs: [
+                            'Intende may store the following information locally on your device:'
+                        ],
+                        list: [
+                            'your selected app language and onboarding status;',
+                            'your chosen daily Screen Time limit;',
+                            'opaque tokens representing apps you selected for limitation;',
+                            'the start and end time of an active focus session;',
+                            'local settings needed to restore app state and provide notifications.'
+                        ]
+                    },
+                    {
+                        title: '3. Screen Time and selected apps',
+                        paragraphs: [
+                            'With your permission, Intende uses Apple Family Controls, Device Activity, and Managed Settings APIs to monitor when the daily limit you selected is reached and to temporarily restrict selected apps. Intende may also use these APIs to restrict apps during an active focus session.',
+                            'Apple represents selected apps using privacy-preserving opaque tokens. Intende stores these tokens and the daily-limit configuration in a protected App Group shared with its Screen Time extension. We do not upload your selected-app tokens, daily limit, or focus-session details to our own servers.',
+                            'If you revoke Screen Time authorization, Apple may invalidate previously issued tokens and Intende may no longer be able to monitor or restrict the selected apps.'
+                        ]
+                    },
+                    {
+                        title: '4. Notifications',
+                        paragraphs: [
+                            'If you grant notification permission, Intende may schedule a local notification when your daily Screen Time limit is approaching. The notification is generated on your device through Apple’s notification system.',
+                            'Intende does not operate a remote push-notification server. You can disable notification permission at any time in iOS Settings.'
+                        ]
+                    },
+                    {
+                        title: '5. Advertising and Google Mobile Ads',
+                        paragraphs: [
+                            'The free version of Intende may show interstitial advertising provided through Google Mobile Ads. Depending on your device, region, consent choices, Google settings, and applicable law, Google may process information such as IP address, approximate location inferred from network information, device or advertising identifiers where permitted, ad requests, ad impressions and interactions, product interaction data, crash data, performance data, and other diagnostic information.',
+                            'Google may use this information to deliver and measure ads, limit ad frequency, detect fraud and abuse, maintain security, provide analytics, and improve its advertising services. Intende does not provide Google with your selected-app tokens, daily Screen Time limit, or focus-session details for advertising.',
+                            'Users with an active Intende Plus subscription are not shown advertising by Intende. Google processes information under its own privacy terms. Learn more in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and Google’s <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Mobile Ads data disclosure</a>.'
+                        ]
+                    },
+                    {
+                        title: '6. Subscriptions and purchases',
+                        paragraphs: [
+                            'Intende offers optional monthly and yearly Intende Plus subscriptions. Payments are processed by Apple through the App Store. We do not directly receive or store your payment card number, bank account number, or full billing credentials.',
+                            'Intende uses RevenueCat to manage products, purchase validation, subscription status, entitlements, and restore-purchase functionality. Because Intende does not use user accounts, RevenueCat generates an anonymous App User ID and may process product identifiers, purchase and subscription information, transaction or receipt information, entitlement status, device platform, app version, and related technical data needed to provide subscription services.',
+                            'RevenueCat and Apple process this information under their own terms and privacy policies. Learn more in the <a href="https://www.revenuecat.com/privacy/" target="_blank" rel="noopener noreferrer">RevenueCat Privacy Policy</a> and the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.'
+                        ]
+                    },
+                    {
+                        title: '7. Information you provide when contacting us',
+                        paragraphs: [
+                            'If you contact us by email, we may receive your email address, message content, and any information or attachments you choose to include. We use this information to respond to your request, investigate issues, provide support, comply with legal obligations, and maintain reasonable support records.',
+                            'Please do not send sensitive personal information, Screen Time screenshots, or information about another person unless it is necessary for your request.'
+                        ]
+                    },
+                    {
+                        title: '8. Automatically processed technical information',
+                        paragraphs: [
+                            'Apple, the App Store, Google Mobile Ads, RevenueCat, the operating system, and related SDKs may process technical information needed to provide app distribution, purchases, subscriptions, advertising, security, diagnostics, and network functionality.',
+                            'The exact information processed may vary by app version, device settings, region, subscription status, consent choices, and whether third-party functionality is used.'
+                        ]
+                    },
+                    {
+                        title: '9. How information is used',
+                        paragraphs: [
+                            'Local information is used to remember your preferences, run focus sessions, monitor the selected daily limit, restrict selected apps, restore app state, and schedule local notifications.',
+                            'Information processed by third-party providers is used to deliver and measure advertising in the free version, process and restore purchases, verify subscription access, maintain service security, prevent fraud, diagnose technical problems, and comply with legal and app-store requirements.'
+                        ]
+                    },
+                    {
+                        title: '10. How information is shared',
+                        paragraphs: [
+                            'We do not sell your selected-app information, focus-session details, or locally stored Intende settings.',
+                            'Information may be processed by Apple for iOS, App Store, Screen Time, notification, and payment functionality; by Google for advertising; and by RevenueCat for subscription management. These providers process information under their own terms and privacy policies and may process data in countries other than your own.',
+                            'We may disclose information you send to us directly if required by law, legal process, app-store rules, or when reasonably necessary to protect users, our rights, service providers, or the security of the app.'
+                        ]
+                    },
+                    {
+                        title: '11. Data retention and deletion',
+                        paragraphs: [
+                            'Local settings, Screen Time tokens, limit configuration, and focus-session state remain on your device until you change or remove them, reset app data where supported, or uninstall Intende.',
+                            'Deleting Intende removes locally stored app data but does not automatically cancel an active subscription. Subscriptions must be managed or canceled through your Apple ID and App Store settings.',
+                            'Advertising, purchase, subscription, and transaction information may be retained by Google, RevenueCat, and Apple according to their respective policies and applicable legal requirements. Support emails may be retained for as long as reasonably necessary to answer your request, maintain support history, comply with legal obligations, and protect our rights.'
+                        ]
+                    },
+                    {
+                        title: '12. Your choices and privacy rights',
+                        paragraphs: [
+                            'You can change or remove selected apps and daily limits inside Intende, revoke Screen Time or notification permission in iOS Settings, manage or cancel a subscription through the App Store, restore purchases where available, manage eligible advertising or tracking choices in device settings, and uninstall Intende to remove locally stored data.',
+                            'Depending on where you live, you may have rights to request access, correction, deletion, restriction, objection, portability, withdrawal of consent, or information about personal data that we control. Because Intende has no user accounts or server-side Screen Time database, we generally cannot access or remotely delete information stored only on your device.',
+                            'For privacy requests concerning information you sent directly to us, contact kitforkidsapps@gmail.com.'
+                        ]
+                    },
+                    {
+                        title: "13. Children's privacy",
+                        paragraphs: [
+                            'Intende is a general focus and productivity app and is not specifically directed to children under 13. It does not require an account and does not knowingly ask children to provide their name, date of birth, email address, precise location, contacts, photos, or other personal contact information inside the app.',
+                            'If you are a parent or guardian and believe that a child has sent personal information to us through email or another support channel, contact us and we will take reasonable steps to review and delete it where required by law.'
+                        ]
+                    },
+                    {
+                        title: '14. Security',
+                        paragraphs: [
+                            'We minimize collection and keep Screen Time settings and focus-session information on the device where possible. We use reasonable administrative, technical, and organizational measures designed to protect information. However, no device, storage system, network, or method of transmission can be guaranteed to be completely secure.'
+                        ]
+                    },
+                    {
+                        title: '15. Changes to this Privacy Policy',
+                        paragraphs: [
+                            'We may update this Privacy Policy to reflect changes to Intende, third-party services, legal requirements, or our practices. When changes are made, we will update the “Last updated” date above and may provide additional notice when appropriate.'
+                        ]
+                    },
+                    {
+                        title: '16. Contact',
+                        paragraphs: [
+                            'If you have questions, requests, or concerns about this Privacy Policy, contact Vage Margarian at kitforkidsapps@gmail.com.'
+                        ]
+                    }
+                ]
             }
         };
 
@@ -652,6 +817,7 @@
             const policy = policies[appKey] || policies.hushaby;
 
             document.title = policy.title;
+            appIcon.classList.toggle('intende-icon', appKey === 'intende');
             appIcon.textContent = policy.icon;
             appName.textContent = policy.appName;
             dates.textContent = policy.dates;
