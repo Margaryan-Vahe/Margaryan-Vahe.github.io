@@ -650,7 +650,7 @@
                 title: 'Privacy Policy — Intende',
                 appName: 'Intende: Focus & Screen Time',
                 icon: 'i',
-                dates: 'Effective date: August 7, 2026 · Last updated: August 7, 2026',
+                dates: 'Effective date: August 7, 2026 · Last updated: September 18, 2026',
                 intro: 'Intende helps you focus, set a daily Screen Time limit for selected apps, and temporarily reduce digital distractions. This Privacy Policy explains how information is handled when you use Intende.',
                 email: 'kitforkidsapps@gmail.com',
                 footer: '© 2026 Intende. All rights reserved.',
@@ -660,7 +660,7 @@
                         title: '1. Overview',
                         paragraphs: [
                             'Intende is provided by Vage Margarian (“we”, “us”, or “our”). The app does not require you to create an account and does not operate its own server or backend for storing a personal profile, focus sessions, Screen Time selections, or daily-limit settings.',
-                            'Most information used by Intende is stored locally on your device. Certain third-party services may process limited information to provide advertising, subscriptions, purchases, app-store functionality, security, and technical operations.'
+                            'Most information used by Intende is stored locally on your device. Certain third-party services may process limited information to provide advertising and advertising consent management, subscriptions, purchases, app-store functionality, security, and technical operations.'
                         ]
                     },
                     {
@@ -673,7 +673,8 @@
                             'your chosen daily Screen Time limit;',
                             'opaque tokens representing apps you selected for limitation;',
                             'the start and end time of an active focus session;',
-                            'local settings needed to restore app state and provide notifications.'
+                            'local settings needed to restore app state and provide notifications;',
+                            'advertising consent status and privacy-choice availability managed by Google’s User Messaging Platform (UMP).'
                         ]
                     },
                     {
@@ -692,11 +693,13 @@
                         ]
                     },
                     {
-                        title: '5. Advertising and Google Mobile Ads',
+                        title: '5. Advertising, consent, and Google AdMob',
                         paragraphs: [
-                            'The free version of Intende may show interstitial advertising provided through Google Mobile Ads. Depending on your device, region, consent choices, Google settings, and applicable law, Google may process information such as IP address, approximate location inferred from network information, device or advertising identifiers where permitted, ad requests, ad impressions and interactions, product interaction data, crash data, performance data, and other diagnostic information.',
-                            'Google may use this information to deliver and measure ads, limit ad frequency, detect fraud and abuse, maintain security, provide analytics, and improve its advertising services. Intende does not provide Google with your selected-app tokens, daily Screen Time limit, or focus-session details for advertising.',
-                            'Users with an active Intende Plus subscription are not shown advertising by Intende. Google processes information under its own privacy terms. Learn more in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and Google’s <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Mobile Ads data disclosure</a>.'
+                            'The free version of Intende may show banner and interstitial advertising provided through Google AdMob and the Google Mobile Ads SDK. At each app launch, Intende requests updated advertising consent information through Google’s User Messaging Platform (UMP). When Google determines that a consent form is required, Intende presents that form. The Google Mobile Ads SDK is initialized and ad requests are made only after UMP reports that ads may be requested.',
+                            'Depending on your device, region, consent choices, Google settings, and applicable law, Google may process information such as IP address, approximate location inferred from network information, device or app identifiers and advertising identifiers where available and permitted, ad requests, ad impressions and interactions, product interaction data, crash data, performance data, and other diagnostic information. UMP may process and store consent-related information needed to determine whether a privacy message or privacy-options entry point is required and to remember your choices.',
+                            'Google may use this information to deliver personalized ads when you have provided the required consent, or non-personalized or limited ads when appropriate; measure ads; limit ad frequency; detect fraud and abuse; maintain security; provide analytics; and operate and improve its advertising services. Declining personalized advertising does not necessarily remove all ads or all processing required to deliver and secure them.',
+                            'When Google requires a privacy-options entry point, you can review, change, or withdraw eligible advertising consent choices in Intende by opening Settings → Privacy Settings. You may also manage applicable system-level advertising and tracking controls in iOS Settings. Withdrawal of consent does not affect processing that was lawful before withdrawal.',
+                            'Intende does not provide Google with your selected-app tokens, daily Screen Time limit, or focus-session details for advertising. Users with an active Intende Plus subscription are not shown advertising by Intende. Google processes information under its own privacy terms. Learn more in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from sites or apps that use its services</a>, and Google’s <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Mobile Ads data disclosure</a>.'
                         ]
                     },
                     {
@@ -717,7 +720,7 @@
                     {
                         title: '8. Automatically processed technical information',
                         paragraphs: [
-                            'Apple, the App Store, Google Mobile Ads, RevenueCat, the operating system, and related SDKs may process technical information needed to provide app distribution, purchases, subscriptions, advertising, security, diagnostics, and network functionality.',
+                            'Apple, the App Store, Google Mobile Ads, Google UMP, RevenueCat, the operating system, and related SDKs may process technical information needed to provide app distribution, purchases, subscriptions, advertising, advertising consent management, security, diagnostics, and network functionality.',
                             'The exact information processed may vary by app version, device settings, region, subscription status, consent choices, and whether third-party functionality is used.'
                         ]
                     },
@@ -725,14 +728,14 @@
                         title: '9. How information is used',
                         paragraphs: [
                             'Local information is used to remember your preferences, run focus sessions, monitor the selected daily limit, restrict selected apps, restore app state, and schedule local notifications.',
-                            'Information processed by third-party providers is used to deliver and measure advertising in the free version, process and restore purchases, verify subscription access, maintain service security, prevent fraud, diagnose technical problems, and comply with legal and app-store requirements.'
+                            'Information processed by third-party providers is used to obtain and remember advertising privacy choices, determine whether ads may be requested, deliver and measure advertising in the free version, process and restore purchases, verify subscription access, maintain service security, prevent fraud, diagnose technical problems, and comply with legal and app-store requirements.'
                         ]
                     },
                     {
                         title: '10. How information is shared',
                         paragraphs: [
                             'We do not sell your selected-app information, focus-session details, or locally stored Intende settings.',
-                            'Information may be processed by Apple for iOS, App Store, Screen Time, notification, and payment functionality; by Google for advertising; and by RevenueCat for subscription management. These providers process information under their own terms and privacy policies and may process data in countries other than your own.',
+                            'Information may be processed by Apple for iOS, App Store, Screen Time, notification, and payment functionality; by Google for advertising and advertising consent management; and by RevenueCat for subscription management. These providers process information under their own terms and privacy policies and may process data in countries other than your own.',
                             'We may disclose information you send to us directly if required by law, legal process, app-store rules, or when reasonably necessary to protect users, our rights, service providers, or the security of the app.'
                         ]
                     },
@@ -741,13 +744,13 @@
                         paragraphs: [
                             'Local settings, Screen Time tokens, limit configuration, and focus-session state remain on your device until you change or remove them, reset app data where supported, or uninstall Intende.',
                             'Deleting Intende removes locally stored app data but does not automatically cancel an active subscription. Subscriptions must be managed or canceled through your Apple ID and App Store settings.',
-                            'Advertising, purchase, subscription, and transaction information may be retained by Google, RevenueCat, and Apple according to their respective policies and applicable legal requirements. Support emails may be retained for as long as reasonably necessary to answer your request, maintain support history, comply with legal obligations, and protect our rights.'
+                            'Advertising information and advertising consent choices may be retained by Google according to Google’s policies and applicable legal requirements. Purchase, subscription, and transaction information may be retained by RevenueCat and Apple according to their respective policies and applicable legal requirements. Support emails may be retained for as long as reasonably necessary to answer your request, maintain support history, comply with legal obligations, and protect our rights.'
                         ]
                     },
                     {
                         title: '12. Your choices and privacy rights',
                         paragraphs: [
-                            'You can change or remove selected apps and daily limits inside Intende, revoke Screen Time or notification permission in iOS Settings, manage or cancel a subscription through the App Store, restore purchases where available, manage eligible advertising or tracking choices in device settings, and uninstall Intende to remove locally stored data.',
+                            'You can change or remove selected apps and daily limits inside Intende, revoke Screen Time or notification permission in iOS Settings, manage or cancel a subscription through the App Store, restore purchases where available, and uninstall Intende to remove locally stored data. When Google requires privacy options, you can review, change, or withdraw eligible advertising consent choices through Settings → Privacy Settings in Intende. Applicable system-level advertising and tracking controls remain available in iOS Settings.',
                             'Depending on where you live, you may have rights to request access, correction, deletion, restriction, objection, portability, withdrawal of consent, or information about personal data that we control. Because Intende has no user accounts or server-side Screen Time database, we generally cannot access or remotely delete information stored only on your device.',
                             'For privacy requests concerning information you sent directly to us, contact kitforkidsapps@gmail.com.'
                         ]
