@@ -522,8 +522,8 @@
                 title: 'Privacy Policy — YearTracker: Year Activity Map',
                 appName: 'YearTracker: Year Activity Map',
                 icon: '🗓️',
-                dates: 'Effective date: July 26, 2026 · Last updated: September 17, 2026',
-                intro: 'YearTracker helps you plan tasks, view your activity across the year, track progress, schedule local reminders, and optionally import selected items from Apple Reminders. This Privacy Policy explains how information is handled when you use the app.',
+                dates: 'Effective date: July 26, 2026 · Last updated: October 6, 2026',
+                intro: 'YearTracker helps you plan tasks, view activity across the year, track progress, schedule local notifications, and optionally display selected Apple Calendar events and Apple Reminders. This Privacy Policy explains how information is handled when you use the app.',
                 email: 'kitforkidsapps@gmail.com',
                 footer: '© 2026 YearTracker. All rights reserved.',
                 showUtilityLinks: false,
@@ -531,8 +531,8 @@
                     {
                         title: '1. Overview',
                         paragraphs: [
-                            'YearTracker is provided by Vage Margarian (“we”, “us”, or “our”). The app does not require you to create an account and does not operate its own server or backend for storing your tasks or personal profile.',
-                            'Most information created or imported in YearTracker is stored locally on your device. The app also uses Google AdMob to display advertising and Google’s User Messaging Platform (UMP) to manage advertising privacy choices. Google may process device, advertising, usage, diagnostic, and consent-related information as described below.'
+                            'YearTracker is provided by Vage Margarian (“we”, “us”, or “our”). The app does not require you to create an account and does not operate its own server or backend for storing your tasks, calendar events, reminders, or personal profile.',
+                            'Task-related information created or imported in YearTracker is stored locally on your device. Optional Apple Calendar and Apple Reminders integrations use Apple’s EventKit framework. The app also uses Google AdMob to display banner advertising and Google’s User Messaging Platform (UMP) to manage advertising privacy choices. Google may process device, advertising, interaction, diagnostic, and consent-related information as described below.'
                         ]
                     },
                     {
@@ -541,105 +541,121 @@
                             'YearTracker may store the following information locally on your device:'
                         ],
                         list: [
-                            'task titles, notes, scheduled dates and times;',
-                            'task completion status, repeat settings, rescheduling history, and yearly activity statistics;',
-                            'selected language and app preferences;',
-                            'selected Apple Reminders list identifiers, synchronization status, and locally imported read-only task copies;',
-                            'local settings used to control task notifications and banner visibility;',
-                            'advertising consent choices and related consent status stored by Google’s User Messaging Platform (UMP).'
+                            'task titles, notes, scheduled dates and times, completion status, repeat settings, early-reminder settings, and creation or completion dates;',
+                            'task rescheduling history and information used to calculate yearly activity and progress statistics;',
+                            'locally imported copies of selected Apple Calendar events and Apple Reminders, including related source and list identifiers;',
+                            'selected calendar and reminder-list identifiers, connection status, synchronization status, and last successful synchronization times;',
+                            'your selected app language and other preferences, including temporary banner-visibility settings;',
+                            'advertising consent status and privacy-choice availability managed by Google’s User Messaging Platform (UMP).'
                         ]
                     },
                     {
-                        title: '3. Apple Reminders access',
+                        title: '3. Apple Calendar access',
                         paragraphs: [
-                            'Apple Reminders integration is optional. YearTracker requests full access to Reminders only after you choose to connect the integration and the system displays Apple’s permission prompt.',
-                            'If you grant access, YearTracker reads reminders from the lists you select and creates local read-only copies so they can appear in your yearly task view. This may include reminder titles, notes, due dates, completion status, list names, and technical identifiers required to synchronize those reminders.',
-                            'YearTracker does not upload the contents of your reminders to our own servers and does not use your task or reminder content for advertising. You can disconnect the integration inside the app and revoke Reminders permission at any time in iOS Settings.'
+                            'Apple Calendar integration is optional. YearTracker requests full Calendar access only after you tap Continue and iOS presents Apple’s system permission prompt. You can deny access and continue using the app without the Calendar integration.',
+                            'If you grant access, YearTracker displays available calendar names so you can manage which calendars are enabled for import. For enabled calendars, the app may read event titles, notes, start dates and times, all-day status, calendar names, recurrence information, last-modified dates, and technical identifiers needed to identify and synchronize events.',
+                            'Calendar events are imported into YearTracker as local read-only items. YearTracker does not create, edit, complete, or delete events in Apple Calendar, does not upload calendar content to our own servers, and does not provide calendar content to Google for advertising.',
+                            'You can disconnect Apple Calendar inside YearTracker and revoke Calendar permission in iOS Settings. Disconnecting lets you keep or remove the locally imported copies. Revoking permission stops future access but does not automatically delete copies already stored in YearTracker.'
                         ]
                     },
                     {
-                        title: '4. Notifications',
+                        title: '4. Apple Reminders access',
                         paragraphs: [
-                            'If you enable a time for a task and allow notifications, YearTracker may schedule local notifications on your device. These notifications can contain the task title and reminder text.',
-                            'YearTracker uses local notifications and does not operate a remote push-notification server. You can disable notification permission in iOS Settings at any time.'
+                            'Apple Reminders integration is optional. YearTracker requests full Reminders access only after you tap Continue and iOS presents Apple’s system permission prompt. You can deny access and continue using the app without the Reminders integration.',
+                            'If you grant access, YearTracker displays available reminder-list names so you can manage which lists are enabled for import. For enabled lists, the app may read reminder titles, notes, due dates and times, completion status and completion dates, list names, recurrence information, last-modified dates, and technical identifiers needed to identify and synchronize reminders.',
+                            'Imported reminders are read-only in YearTracker except for completion status. When you mark an imported reminder complete or incomplete in YearTracker, the app updates that reminder’s completion status in Apple Reminders. YearTracker does not upload reminder content to our own servers and does not provide reminder content to Google for advertising.',
+                            'You can disconnect Apple Reminders inside YearTracker and revoke Reminders permission in iOS Settings. Disconnecting lets you keep or remove the locally imported copies. Revoking permission stops future access but does not automatically delete copies already stored in YearTracker.'
                         ]
                     },
                     {
-                        title: '5. Advertising and Google AdMob',
+                        title: '5. Apple and iCloud processing',
                         paragraphs: [
-                            'YearTracker may display banner advertising provided by Google AdMob. Depending on your device, region, consent choices, Google settings, and applicable law, Google Mobile Ads and related services may process information such as IP address, approximate location inferred from network information, device or app identifiers, advertising data, ad impressions and interactions, product interaction data, crash data, performance data, and other diagnostic information.',
-                            'Google may use this information to deliver and measure ads, limit ad frequency, detect fraud and abuse, maintain security, provide analytics, and improve advertising services. YearTracker does not provide Google with your task titles, task notes, Apple Reminders content, or yearly productivity statistics for ad targeting.',
-                            'Google processes information under its own privacy terms. You can learn more in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a> and Google’s information about <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Mobile Ads data disclosure</a>.'
+                            'Calendar and reminder data are provided to YearTracker by iOS through Apple’s EventKit framework. If you use iCloud or another account configured in Apple Calendar or Apple Reminders, the original data may be stored or synchronized by Apple or the applicable account provider under that provider’s terms and privacy policy.',
+                            'YearTracker’s local copies are separate from the original items. Removing a local copy from YearTracker does not delete the original Apple Calendar event or Apple Reminder. Learn more in the <a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener noreferrer">Apple Privacy Policy</a>.'
                         ]
                     },
                     {
-                        title: '6. Advertising consent, UMP, and privacy settings',
+                        title: '6. Local notifications',
                         paragraphs: [
-                            'YearTracker uses Google’s User Messaging Platform (UMP) to manage advertising consent. UMP checks whether a privacy message is required and presents applicable choices based on your region and consent status. These choices may concern personalized advertising and the use of device information. Ad requests depend on the consent status reported by UMP.',
-                            'When available, open the privacy settings in YearTracker’s app settings to review or change your advertising choices, including withdrawing consent where applicable. The available options depend on your region and Google’s privacy-message requirements. See <a href="https://developers.google.com/admob/ios/privacy" target="_blank" rel="noopener noreferrer">Google’s UMP information</a>.',
-                            'Declining personalized advertising does not necessarily remove ads or stop all advertising-related data processing. Depending on your choices and applicable requirements, non-personalized or limited ads may be available. Non-personalized ads may still use device information for purposes such as frequency capping, measurement, and fraud prevention. See <a href="https://support.google.com/admob/answer/7676680?hl=en" target="_blank" rel="noopener noreferrer">Google’s explanation of personalized and non-personalized ads</a>.',
-                            'Advertising consent choices are separate from Apple’s App Tracking Transparency permission. If iOS tracking permission is requested, you may allow or deny it through Apple’s system prompt and later change it in iOS Settings under Privacy &amp; Security → Tracking. Denying tracking permission does not prevent you from using YearTracker.'
+                            'If you enable a time for a local task and allow notifications, YearTracker may schedule notifications on your device. Notification content may include the task title and task notes, and may be visible on the lock screen depending on your iOS notification settings.',
+                            'Notification actions can let you mark a task as completed or postpone it. YearTracker uses local notifications and does not operate a remote push-notification server. Imported Apple Calendar events and Apple Reminders do not receive YearTracker task notifications. You can deny or disable notification permission without blocking other app features.'
                         ]
                     },
                     {
-                        title: '7. How information is used',
+                        title: '7. Advertising and Google AdMob',
                         paragraphs: [
-                            'Local information is used to provide YearTracker features, including creating and displaying tasks, calculating yearly progress and activity statistics, remembering preferences, importing selected Apple Reminders, and scheduling local notifications.',
-                            'Advertising-related information processed by Google is used for ad delivery, measurement, analytics, security, fraud prevention, and related advertising functionality. Consent-related information is used to remember and apply your advertising privacy choices and determine which privacy messages and options are available.'
+                            'YearTracker displays banner advertising provided through Google AdMob and the Google Mobile Ads SDK. Depending on your device, region, consent choices, Google settings, and applicable law, Google may process information such as your IP address and general location inferred from it, device or app identifiers, advertising data, ads shown to you, ad interactions, app interaction data, crash logs, performance data, and other diagnostic information.',
+                            'Google may use this information to deliver and measure ads, limit ad frequency, provide advertising analytics, detect fraud and abuse, maintain security, and operate or improve its services. YearTracker does not send Google your task titles, task notes, calendar-event content, reminder content, or yearly productivity statistics for advertising.',
+                            'Google processes information under its own privacy terms. Learn more in the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google Privacy Policy</a>, <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener noreferrer">How Google uses information from apps that use its services</a>, and Google’s <a href="https://developers.google.com/admob/ios/privacy/data-disclosure" target="_blank" rel="noopener noreferrer">Mobile Ads data disclosure</a>.'
                         ]
                     },
                     {
-                        title: '8. How information is shared',
+                        title: '8. Advertising consent and privacy choices',
                         paragraphs: [
-                            'We do not sell your task content, reminder content, or locally stored YearTracker data.',
-                            'Information may be processed by Apple as part of iOS, App Store distribution, permission management, Reminders, and local-notification functionality, and by Google in connection with AdMob advertising and consent management. These companies process information under their own terms and privacy policies.',
-                            'We may disclose information you send to us directly if required by law, legal process, or reasonably necessary to protect users, our rights, or the security of the app.'
+                            'YearTracker uses Google’s User Messaging Platform (UMP) to request updated consent information when the app launches, present a privacy message when required, and determine whether ads may be requested. The choices shown may depend on your region, applicable law, Google’s configuration, and your previous consent status.',
+                            'When Google requires a privacy-options entry point, YearTracker displays Privacy settings in the app settings so you can review, change, or withdraw eligible advertising choices. Declining personalized advertising does not necessarily remove ads or stop processing needed for non-personalized or limited advertising, measurement, frequency controls, security, or fraud prevention.',
+                            'The current version of YearTracker does not present an Apple App Tracking Transparency permission prompt. You can still use applicable system-level advertising and privacy controls in iOS Settings. Learn more about UMP in <a href="https://developers.google.com/admob/ios/privacy" target="_blank" rel="noopener noreferrer">Google’s UMP documentation</a>.'
                         ]
                     },
                     {
-                        title: '9. Support communications',
+                        title: '9. How information is used',
                         paragraphs: [
-                            'If you contact us by email, we may receive your email address, message, and any information you choose to include. We use this information to respond to your request, investigate problems, and maintain reasonable support records.',
-                            'Please do not include sensitive personal information or private task and reminder content unless it is necessary for your support request.'
+                            'Locally stored information is used to create and display tasks, calculate activity and progress, remember preferences, display imported calendar events and reminders, synchronize reminder completion status, maintain integration state, and schedule local notifications.',
+                            'Advertising and consent-related information processed by Google is used for ad delivery, measurement, analytics, consent management, security, fraud prevention, and related advertising functionality.'
                         ]
                     },
                     {
-                        title: '10. Data retention and deletion',
+                        title: '10. How information is shared',
                         paragraphs: [
-                            'Tasks, preferences, statistics, and imported reminder copies remain on your device until you delete them, remove imported items through the app, clear the app’s data where supported, or uninstall YearTracker.',
-                            'Disconnecting Apple Reminders lets you choose whether to keep or remove locally imported copies. Revoking Reminders permission prevents further access but may not automatically delete copies already stored in YearTracker.',
-                            'Advertising and consent-related data processed by Google are retained according to Google’s policies and your applicable settings. Changing consent choices or deleting YearTracker does not automatically erase information previously processed by Google. Support emails may be retained as reasonably necessary to answer your request, maintain support history, comply with legal obligations, and protect our rights.'
+                            'We do not sell your task content, calendar-event content, reminder content, or locally stored YearTracker data.',
+                            'Calendar and reminder information is processed on your device through Apple’s frameworks and may also be processed by Apple or your configured calendar or reminder account provider. Advertising and consent-related information may be processed by Google in connection with AdMob and UMP. These providers process information under their own terms and privacy policies.',
+                            'We may disclose information you send directly to us if required by law or legal process, or when reasonably necessary to protect users, our rights, or the security of the app.'
                         ]
                     },
                     {
-                        title: '11. Your choices and rights',
+                        title: '11. Support communications',
                         paragraphs: [
-                            'You can delete local tasks inside YearTracker, disconnect Apple Reminders, remove imported copies, revoke Reminders or notification permissions in iOS Settings, and uninstall the app to remove its locally stored data. To review or change eligible advertising consent choices, use the privacy settings in YearTracker’s app settings when available. Withdrawing consent does not affect the lawfulness of processing based on consent before its withdrawal.',
-                            'Depending on where you live, you may have rights to request access, correction, deletion, restriction, objection, withdrawal of consent, or information about personal data that we control. Because YearTracker has no user accounts or server-side task database, we generally cannot access or remotely delete data stored only on your device.',
-                            'For privacy questions or requests concerning information you sent directly to us, contact us using the email address below.'
+                            'If you contact us by email, we may receive your email address, message, attachments, and any other information you choose to include. We use this information to respond, investigate problems, provide support, comply with legal obligations, and maintain reasonable support records.',
+                            'Please do not include sensitive personal information or private task, calendar, or reminder content unless it is necessary for your support request.'
                         ]
                     },
                     {
-                        title: "12. Children's privacy",
+                        title: '12. Data retention and deletion',
+                        paragraphs: [
+                            'Local tasks, task history, preferences, statistics, integration settings, and imported copies remain on your device until you delete applicable items, remove imported copies when disconnecting an integration, clear the app’s data where supported, or uninstall YearTracker. Offloading the app or restoring a device backup may preserve or restore local data.',
+                            'Disconnecting Apple Calendar or Apple Reminders lets you choose whether to keep or remove locally imported copies. Revoking a system permission prevents further access but may not automatically remove existing local copies. Deleting local copies does not delete original items from Apple Calendar, Apple Reminders, iCloud, or another configured account.',
+                            'Advertising and consent-related information processed by Google is retained according to Google’s policies and applicable settings. Changing consent choices or deleting YearTracker does not necessarily erase information previously processed by Google. Support emails may be retained as reasonably necessary to answer your request, maintain support history, comply with legal obligations, resolve disputes, and protect our rights.'
+                        ]
+                    },
+                    {
+                        title: '13. Your choices and privacy rights',
+                        paragraphs: [
+                            'You can use YearTracker without connecting Apple Calendar or Apple Reminders. You can delete local tasks in the app, disconnect either integration, remove imported copies, change selected calendars or reminder lists, revoke Calendar, Reminders, or notification permissions in iOS Settings, change eligible advertising privacy choices in YearTracker when available, and uninstall the app to remove its local app container.',
+                            'Depending on where you live, you may have rights to request access, correction, deletion, portability, restriction, objection, withdrawal of consent, or information about personal data that we control. Because YearTracker has no user accounts or server-side task database, we generally cannot access, retrieve, correct, or remotely delete information stored only on your device.',
+                            'For privacy questions or requests concerning information you sent directly to us, contact us using the email address below. For data processed independently by Apple, Google, or another account provider, use that provider’s privacy controls or contact that provider.'
+                        ]
+                    },
+                    {
+                        title: "14. Children's privacy",
                         paragraphs: [
                             'YearTracker is a general productivity app and is not specifically directed to children under 13. The app does not require an account and does not knowingly ask children to provide names, email addresses, precise location, contacts, photos, or other personal contact information.',
                             'If you believe a child has provided personal information to us through a support request, contact us and we will take reasonable steps to review and delete it where appropriate.'
                         ]
                     },
                     {
-                        title: '13. Security',
+                        title: '15. Security',
                         paragraphs: [
-                            'We minimize collection and keep task-related information on the device where possible. We use reasonable measures designed to protect information, but no device, storage system, network, or method of transmission can be guaranteed to be completely secure.'
+                            'We minimize collection and keep task-related information on the device where possible. Access to Apple Calendar and Apple Reminders is controlled by iOS permissions. We use reasonable measures designed to protect information, but no device, storage system, network, or method of transmission can be guaranteed to be completely secure.'
                         ]
                     },
                     {
-                        title: '14. Changes to this Privacy Policy',
+                        title: '16. Changes to this Privacy Policy',
                         paragraphs: [
                             'We may update this Privacy Policy to reflect changes to YearTracker, third-party services, legal requirements, or our practices. When changes are made, we will update the “Last updated” date above and may provide additional notice when appropriate.'
                         ]
                     },
                     {
-                        title: '15. Contact',
+                        title: '17. Contact',
                         paragraphs: [
                             'If you have questions or requests regarding this Privacy Policy, contact Vage Margarian at kitforkidsapps@gmail.com.'
                         ]
